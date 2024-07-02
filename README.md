@@ -40,3 +40,4 @@ Final Output = average output of 3 distinct VGGNet models → ROS, SMOTE, SmoteT
 - os
 - cv2   
 All required dependencies are imported in the notebook.
+The model weights can be found [here](https://drive.google.com/drive/folders/1k_BRhO_E7dmuGrKZY_HquU3OME1UsUiX?usp=drive_link) 
