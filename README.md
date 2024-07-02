@@ -39,4 +39,4 @@ Final Output = average output of 3 distinct VGGNet models → ROS, SMOTE, SmoteT
 - imageio
 - os
 - cv2   
-All required dependies are imported in the notebook.
+All required dependencies are imported in the notebook.
