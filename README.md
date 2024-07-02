@@ -21,7 +21,7 @@ VGGNet, short for Visual Geometry Group Network, trained on FER2013 dataset achi
 - Ensemble Model
 - Real-time classification application
   
-**Final Model**
+**Final Model:**   
 Final Output = average output of 3 distinct VGGNet models → ROS, SMOTE, SmoteTomek (augmented and auxiliary data excluded as they deteriorated the model).
 - Top-1 Accuracy: 97.18%
 - Top-2 Accuracy : 99.58%
