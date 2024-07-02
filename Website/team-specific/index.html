@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Facial Expression Recognition Project</title>
+  <style>
+    /* Optional styling for table */
+    table {
+        border-collapse: collapse;
+        width: 100%; /* Adjust the width as needed */
+        margin: 0 auto; /* Center the table horizontally */
+    }
+
+    td {
+        border: 1px solid #fdfcfc;
+        padding: 8px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 350px; /* Adjust maximum width */
+        height: auto;
+    }
+
+    th {
+            text-align: center; /* Center align table headers */
+        }
+</style>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="../home.html">Practical Machine Deep Learning</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../home.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Facial Expression Recognition</h1>
+        <ul class="list-unstyled">
+          <li>Masa Tantawy</li>
+          <li>Malak Gaballa</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Problem Statement</h2>
+		<p>
+      <div style="text-align: justify;">
+			Human communication is a very complex process. Facial expressions recognition (FER) from images of human faces has a diverse range of applications including in the fields of robotics or human-computer interaction systems. 
+    <p>Given images of human faces showing different expressions, the model should be able to <b> categorize each image into one of 7 categories </b>, each representing a facial expression. These are: <i> 0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral</i>. </div>
+		</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Dataset</h2>
+
+        <p>
+        <div style="text-align: justify;">
+			The realm of datasets for facial expression recognition is experiencing a significant boom, reflecting the growing interest and advancements in the field of computer vision. What's particularly intriguing is the diversity in the formats of these datasets, with some comprising raw images, others presented in CSV format with each image represented as a vector of pixels, and some offering both. Amidst surveying the available datasets, five datasets have emerged as prevalent fixtures in research papers: FER2013, CK+, JAFFE, AffectNet, and ExpW. Each of these datasets offers unique insights and challenges, making them invaluable resources for researchers aiming to push the boundaries of facial expression recognition technology.<br>
+			<br> Considering all available datasets, FER2013 emerges as the preferred choice for our research endeavors. One of its standout features is its complete availability on open-source platforms without any access restrictions. This accessibility makes it incredibly convenient for researchers like us to work with.
+       The dataset contains 35,887 facial grayscale images, each restricted to the size of 48x48 pixels.<br> </div>
+			<br>
+      <table>
+        <tr>
+            <th>Dataset Size</th>
+            <th>Number of Images</th>
+            <th>Image Dimensions</th>
+            <th>Categories</th>
+        </tr>
+        <tr>
+            <td>63 MB</td>
+            <td>35,887 images</td>
+            <td>48x48 grayscale </td>
+            <td>7</td>
+        </tr>
+    </table>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src='https://www.researchgate.net/publication/371658147/figure/fig1/AS:11431281168605580@1687031083471/Selected-examples-of-the-original-FER2013-dataset.ppm'
+      		class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Input/Output Examples</h2>
+
+        <p>
+          <i>Model Input:</i> Image - vector of pixels for a 48x48 pixel grayscale image,  <br>
+          <i>Model Output:</i> A number from 0 to 6 which indicates the facial expression illustrated in the image. 
+          
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/examples.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">State of the art</h2>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/state-of-the-art-results.png" class="img-fluid text-center">
+    	</div>
+    	<br/> <!-- Empty Line after the image -->
+      <p>
+        After going over all the state of the art models, .....
+      </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Orignial Model from Literature</h2>
+
+        <p>
+          The <b>VGGNet model</b> , short for Visual Geometry Group Network, is a classical CNN used in large-scale image processing & pattern recognition. The network consists of 4 convolutional stages and 3 fully connected layers. The convolutional stages are responsible for feature extraction, dimension reduction, and non-linearity. The fully connected layers are trained to classify the inputs as described by extracted features.
+          <br>     
+
+		</p>
+
+		<br/> <!-- Empty Line before the image -->
+	    <div class="img-container" align="center"> <!-- Block parent element -->
+      		<img src="resources/images/model.jpeg" class="img-fluid text-center">
+    	</div>
+    	<br/> 
+      <ul>
+        <li>Each <b>convolutional stage</b> has 2 convolutional blocks & a max-pooling layer.</li>
+        <li> <b>Convolution block:</b> consists of a convolutional layer, a ReLU activation, and a batch normalization layer. Batch normalization is used to speed up the learning process, reduce the internal covariance shift, and prevent gradient vanishing or explosion. </li>
+        <li>The first 2 fully connected layers are followed by a ReLU activation. The third fully connected layer is for classification. </li>
+      </ul>     <br>
+      The baseline model, trained over 350 epochs, produced the following results: 
+      <ul>
+        <li> Top-1 Accuracy = 73.28% </li>
+        <li> Top-2 Accuracy = 86.45% </li>
+      </ul> 
+      <table>
+        <tr>
+            <td><img src="resources/images/ogacc.png" alt="Accuracy"></td>
+            <td><img src="resources/images/ogloss.png" alt="Loss"></td>
+            <td><img src="resources/images/ogcm.png" alt="Conf"></td>
+        </tr>
+    </table>
+      The literature references can be found below:<br>
+      <ul>
+        <li> <i>Training:</i> FER2013 dataset achieving an accuracy of 73.28% </li>
+        <li> <i>Research Paper:</i> <a href="https://arxiv.org/pdf/2105.03588v1.pdf"> Facial Emotion Recognition: State of the Art Performance on FER2013 </a></li>
+        <li> <i>Repository:</i> <a href="https://github.com/usef-kh/fer"> Github link  </a></li>
+        <li> <i>Frameworks:</i> Pytorch  </li>
+      </ul> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-left">
+        <h2 class="mt-5">Proposed Updates</h2>
+
+        <p>
+			Add all the model updates you made here, need as many images as you wish
+		</p>
+
+		<h5 class="mt-5">Update #1: Model Reconstruction using Keras TensorFlow</h5>
+		<p>
+			Due to the inability to modify the model hyperparameters using Pytorch, the exact model architecture was constructed using Keras TensorFlow for easier model modifications.
+      The model, however, trained only over 180 epochs due to GPU constraint. Using a customized evaluation function,the following metrics and plots were yielded: <br>
+      <ul>
+        <li> Top-1 Accuracy = 65.76% </li>
+        <li> Top-2 Accuracy = 79.91% </li>
+        <li> Top-3 Accuracy = 88.49% </li>
+      </ul> 
+      <table>
+        <tr>
+            <td><img src="resources/images/initialmodelacc.png" alt="Accuracy"></td>
+            <td><img src="resources/images/initialmodelloss.png" alt="Loss"></td>
+            <td><img src="resources/images/initialmodelcm.png" alt="Conf"></td>
+        </tr>
+    </table>
+		</p>
+
+		<h5 class="mt-5">Update #2: Data Imbalance Handling Techniques</h5>
+		<p>
+			Since the dataset was highly imbalanced, it was decided to address this issue by implementing Random Oversampling, SMOTE and SmoteTomek to rebalance the dataset and enhance model generalization.
+      Undersampling was excluded since deep models require large datasets. SmoteENN was also excluded as it reversed the imbalance.
+      The following plots demonstrate the techniques that were implemented and their effect on the dataset distribution.
+      <table>
+        <tr>
+            <td><img src="resources/images/ogdata.png" alt="Accuracy"></td>
+            <td><img src="resources/images/rossmt.png" alt="Loss"></td>
+            <td><img src="resources/images/smtk.png" alt="Conf"></td>
+        </tr>
+    </table>
+		</p>
+      </div>
+      <h5 class="mt-5">Update #3: Hyperparameters Tuning</h5>
+		<p>
+			To optimize model performance, hyperparameter tuning took place. This involved experimentation with various regularizers and optimizers, alongside adjusting learning rates to gauge their impact.
+      L1 regularization failed to show significant improvements in performance or address overfitting concerns. Similarly, the SGD optimizer yielded suboptimal results. However, after thorough experimentation, 
+      it was discovered that setting the learning rate to lr=0.0001 with the ADAM optimizer led to the most promising outcomes. To prevent overfitting, an early stopping mechanism was implemented, which halted training if the model's performance didn't improve for 10 consecutive epochs. This approach ensured continued learning without getting stuck on the same data.
+      This resulted in the training process stopping after 54 epochs only with slightly improved results as follows:
+      <ul>
+        <li> Top-1 Accuracy = 66.15% </li>
+        <li> Top-2 Accuracy = 82.22% </li>
+        <li> Top-3 Accuracy = 90.89% </li>
+      </ul> 
+      <table>
+        <tr>
+            <td><img src="resources/images/htacc.png" alt="Accuracy"></td>
+            <td><img src="resources/images/htloss.png" alt="Loss"></td>
+            <td><img src="resources/images/htcm.png" alt="Conf"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><img src="resources/images/hts.png" alt="FinalModifications"></td>
+          <td></td>
+      </tr>
+    </table>
+		</p>
+  </div>
+    <h5 class="mt-5">Update #4: Modelling on Balanced Datasets</h5>
+		<p>
+			After applying techniques to handle dataset imbalances, each dataset was split using sklearn into three parts as the original dataset: training, testing, and validation sets, with an 80/10/10 ratio. The model, fine-tuned with hyperparameters, was then trained separately on each dataset, resulting in three unique models. 
+      This approach ensured thorough evaluation and tailored performance across different datasets. 
+      <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th class="center-text">Random Oversampling</th>
+                <th class="center-text">SMOTE</th>
+                <th class="center-text">SmoteTomek</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Accuracies</b></td>
+                <td>
+                   <ul>
+                      <li>Top-1: 85.97%</li>
+                      <li>Top-2: 92.71%</li>
+                      <li>Top-3: 96.49%</li>
+                  </ul>
+                </td>
+                <td>
+                   <ul>
+                      <li>Top-1: 87.18%</li>
+                      <li>Top-2: 93.88%</li>
+                      <li>Top-3: 96.84%</li>
+                  </ul>
+                </td>
+                <td>
+                   <ul>
+                      <li>Top-1: 82.88%</li>
+                      <li>Top-2: 91.82%</li>
+                      <li>Top-3: 95.64%</li>
+                  </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Number of Epochs</b></td>
+                <td>84 epochs</td>
+                <td>19 epochs</td>
+                <td>73 epochs</td>
+            </tr>
+            <tr>
+                <td><b>Accuracy Plot</b></td>
+                <td><img src="resources/images/rosacc.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/smacc.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/stkacc.png" alt="Accuracy Plot"></td>
+            </tr>
+            <tr>
+                <td><b>Loss Plot</b></td>
+                <td><img src="resources/images/rosloss.png" alt="Loss Plot"></td>
+                <td><img src="resources/images/smloss.png" alt="Loss Plot"></td>
+                <td><img src="resources/images/stkloss.png" alt="Loss Plot"></td>
+            </tr>
+            <tr>
+                <td><b>Confusion Matrix</b></td>
+                <td><img src="resources/images/roscm.png" alt="Confusion Matrix"></td>
+                <td><img src="resources/images/smcm.png" alt="Confusion Matrix"></td>
+                <td><img src="resources/images/stkcm.png" alt="Confusion Matrix"></td>
+            </tr>
+        </tbody>
+    </table>
+		</p>
+    <h5 class="mt-5">Update #5: Augmented and Auxiliary Data </h5>
+		<p>
+      <div style="text-align: justify;">
+			To boost performance, auxiliary data was fed to the model during training. This aimed to enrich its understanding,
+      improve pattern recognition, and enhance generalization, thus ensuring more accurate predictions across diverse scenarios.
+      <br>For <b>Data Augmentation</b>, a random balanced subset of the dataset has undergone different combinations (none, one, or multiple) of horizontal flipping,
+       rotation, gaussian noise addition with different ratios from given set ranges. 
+      </div>
+       <div class="img-container" align="center"> <!-- Block parent element -->
+        <img src="resources/images/aug.png" class="img-fluid text-center" style="max-width: 450px;"> <br>
+    </div> <br>
+    <table>
+      <thead>
+          <tr>
+              <th></th>
+              <th class="center-text">Random Oversampling</th>
+              <th class="center-text">SMOTE</th>
+              <th class="center-text">SmoteTomek</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td><b>Accuracies</b></td>
+              <td>
+                 <ul>
+                    <li>Top-1: 59.74%</li>
+                    <li>Top-2: 79.91%</li>
+                    <li>Top-3: 88.63%</li>
+                </ul>
+              </td>
+              <td>
+                 <ul>
+                    <li>Top-1: 60.88%</li>
+                    <li>Top-2: 78.99%</li>
+                    <li>Top-3: 89.22%</li>
+                </ul>
+              </td>
+              <td>
+                 <ul>
+                    <li>Top-1: 58.29%</li>
+                    <li>Top-2: 77.46%</li>
+                    <li>Top-3: 86.77%</li>
+                </ul>
+              </td>
+          </tr>
+          <tr>
+              <td><b>Accuracy Plot</b></td>
+              <td><img src="resources/images/augrosacc.png" alt="Accuracy Plot"></td>
+              <td><img src="resources/images/augsmacc.png" alt="Accuracy Plot"></td>
+              <td><img src="resources/images/augstkacc.png" alt="Accuracy Plot"></td>
+          </tr>
+          <tr>
+              <td><b>Loss Plot</b></td>
+              <td><img src="resources/images/augrosloss.png" alt="Accuracy Plot"></td>
+              <td><img src="resources/images/augsmloss.png" alt="Accuracy Plot"></td>
+              <td><img src="resources/images/augstkloss.png" alt="Accuracy Plot"></td>
+          </tr>
+          <tr>
+              <td><b>Confusion Matrix</b></td>
+              <td><img src="resources/images/augroscm.png" alt="Accuracy Plot"></td>
+              <td><img src="resources/images/augsmcm.png" alt="Accuracy Plot"></td>
+              <td><img src="resources/images/augstkcm.png" alt="Accuracy Plot"></td>
+          </tr>
+      </tbody>
+  </table>
+      <br>For <b>Auxiliary Data</b>, the AffectNet Dataset was used. It originally contained 8 categories of 96x96 coloured images. 
+      Before being added to the model, only the common 7 categories were selected, images were converted to grayscale and resized to 48x48. <br>
+      <br><table>
+        <thead>
+            <tr>
+                <th></th>
+                <th class="center-text">Random Oversampling</th>
+                <th class="center-text">SMOTE</th>
+                <th class="center-text">SmoteTomek</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Accuracies</b></td>
+                <td>
+                   <ul>
+                      <li>Top-1: 29.51%</li>
+                      <li>Top-2: 45.33%</li>
+                      <li>Top-3: 53.41%</li>
+                  </ul>
+                </td>
+                <td>
+                   <ul>
+                      <li>Top-1: 30.31%</li>
+                      <li>Top-2: 44.58%</li>
+                      <li>Top-3: 54.25%</li>
+                  </ul>
+                </td>
+                <td>
+                   <ul>
+                      <li>Top-1: 29.17%</li>
+                      <li>Top-2: 42.71%</li>
+                      <li>Top-3: 51.96%</li>
+                  </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Accuracy Plot</b></td>
+                <td><img src="resources/images/auxrosacc.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/auxsmacc.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/auxstkacc.png" alt="Accuracy Plot"></td>
+            </tr>
+            <tr>
+                <td><b>Loss Plot</b></td>
+                <td><img src="resources/images/auxrosloss.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/auxsmloss.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/auxstkloss.png" alt="Accuracy Plot"></td>
+            </tr>
+            <tr>
+                <td><b>Confusion Matrix</b></td>
+                <td><img src="resources/images/auxroscm.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/auxsmcm.png" alt="Accuracy Plot"></td>
+                <td><img src="resources/images/auxstkcm.png" alt="Accuracy Plot"></td>
+            </tr>
+        </tbody>
+    </table>
+		</p>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Final Model Results</h2>
+          <div class="mt-3">
+            <p>
+              <div style="text-align: justify;">
+                Since the addition of auxiliary and augmented data resulted in a steep decline in the model’s performance,an ensemble approach was adopted to enhance model accuracy and robustness.
+                 This approach leverages three distinct VGGNet models trained on balanced datasets generated through different resampling techniques: Random Oversampling, SMOTE (Synthetic Minority Over-sampling Technique), and SMOTE Tomek. 
+                 Each model was individually trained on the dataset, loaded as a trained model then defined as a component of the ensemble. By combining the outputs of these models and averaging them, ensemble's final output was generated. 
+                This ensemble strategy capitalizes on the complementary strengths of the individual models and the diversity of the training data to enhance facial expression recognition performance while mitigating the limitations of any single model.
+                 The performance of the ensemble model was as follows:
+                </div>
+                <table>
+                  <tbody>
+                      <tr>
+                          <td>      <ul style="text-align: left;">
+                            <li> Top-1 Accuracy = 97.18% </li>
+                            <li> Top-2 Accuracy = 99.58% </li>
+                            <li> Top-3 Accuracy = 99.72% </li>
+                          </ul> </td>
+                          <td><img src="resources/images/enscm.png" alt="ConfEns" style="width: 800px; height: auto;"></td>
+                      </tr>
+                  </tbody>
+              </table>
+        </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h2>Technical report</h2>
+          <div class="mt-3">
+            <ul>
+              <li>Python/ Pytorch / Keras TensorFlow</li>
+              <li>Google Colaboratory</li>
+              <li>Training time: Approximately 70 minutes/run</li>
+              <li>Number of Epochs: up to 350 epochs </li>
+              <li>Time per Epoch : 50 seconds</li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-12">
+            <h2>Real Time Application</h2>
+            <div class="mt-3" style="text-align: justify;">
+                <p>
+                    A real-time application has been developed to ensure broad applicability for the Egyptian/Arab race, 
+                    offering high generalizability in facial expression recognition.
+                    Users of the app have the option to either upload an image or capture a real-time picture. 
+                    The captured or uploaded images are instantly classified into one of seven facial expression categories,
+                    providing quick and accurate insights into the individual's emotional state.
+                </p>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- Image -->
+                        <img src="resources/images/app.png" alt="Example Image" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- GIF -->
+                        <img src="resources/images/appgif.gif" alt="Example GIF" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h2>Conclusion</h2>
+          <div class="mt-3">
+            <p>
+              Addressing the imbalance in the dataset and implementing an ensemble approach significantly enhanced the performance of the model. 
+              Initially, without handling the data imbalance, the model achieved an accuracy of 73.28%. By utilizing techniques like Random Oversampling, SMOTE,
+               and SMOTE-Tomek, the imbalance was mitigated, leading to improved accuracy and robustness. Moreover, constructing an ensemble model using multiple 
+               VGGNet models trained on balanced datasets further optimized performance. However, for future recommendations, it is suggested to train the model
+                on a more diverse and generalized database of facial expressions, such as Exp-W. Despite plans to incorporate Exp-W, computational constraints, 
+                including dataset size and GPU limitations, posed challenges. Additionally, considering the inclusion of an eighth category of facial expression,
+                 such as contempt as seen in the AffectNet Dataset, could enhance model comprehensiveness. Lastly, transitioning from grayscale to RGB images for 
+                 input might yield better results, as colors play a crucial role in facial expression recognition.
+                 <table style="background-color: rgba(255, 255, 255, 0.5); border-collapse: collapse;">
+                  <thead>
+                      <tr>
+                          <th style="text-align: center; border: 1px solid transparent;">Lessons Learnt</th>
+                          <th style="text-align: center; border: 1px solid transparent;">Future Recommendations</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td style="text-align: left; border: 1px solid transparent;">
+                              <ul>
+                                  <li>Data imbalance handling significantly enhances the performance of the model.</li>
+                                  <li>Constructing an ensemble model using multiple VGGNet models trained on balanced datasets further optimized performance.</li>
+                                  <li>It is also concluded that extra training on auxiliary or augmented data may lead to worse performance of the model instead of enhancing it.</li>
+                                  <li>The confusion matrix highlights <i>Angry, Fear, and Neutral</i> as the most challenging expressions to classify. This difficulty may arise from subtle facial differences or dataset imbalances. Enhancing the model's ability to distinguish these expressions could improve classification accuracy.</li>
+                                  <!-- Add a comment about the hardest facial expression to classify from conf matrix? -->
+                              </ul>
+                          </td>
+                          <td style="text-align: left; border: 1px solid transparent;">
+                              <ul>
+                                  <li>It is suggested to train the model on a more diverse and generalized database of facial expressions, such as Exp-W which posed a challenge due to GPU limitations and the dataset size.</li>
+                                  <li>Considering the inclusion of an 8th category of facial expression, such as contempt as seen in the AffectNet Dataset, could enhance model comprehensiveness.</li>
+                                  <li>Lastly, transitioning from grayscale to RGB images for input might yield better results.</li>
+                              </ul>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+              
+              
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <h2>References</h2>
+          <div class="mt-3">
+            <p>
+              All references are listed below:
+            </p>
+            <ol>
+              <li><a href="https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data">FER2013 Dataset</a></li>
+              <li><a href="https://www.kaggle.com/datasets/noamsegal/affectnet-training-data">AffectNet Dataset</a></li>
+              <li><a href="https://github.com/usef-kh/fer">VGGNet Repository</a></li>
+              <li><a href="https://arxiv.org/pdf/2105.03588v1.pdf">VGGNet Research Paper</a></li>
+              <li><a href="https://colab.research.google.com/drive/1XiJ-sa5Kg324mpq_XG_JMWOlfj_DvZFv#scrollTo=FCly4_J8uwyv">Keras Tensorflow Model Source Code</a></li>
+          </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
