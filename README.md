@@ -7,11 +7,13 @@ Given images of human faces showing different expressions, the model should be a
 Weighted accuracy metric is used to account for class imbalance
 
 **Selected Dataset:**
-FER2013 Dataset
+[FER2013 Dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
 
 **Baseline Model:** 
-VGGNet, short for Visual Geometry Group Network, trained on FER2013 dataset achieving an accuracy of 73.28%. It is a classical CNN consisting of 4 convolutional stages and 3 fully connected layers.   
+VGGNet, short for Visual Geometry Group Network, trained on FER2013 dataset achieving an accuracy of 73.28%. It is a classical CNN consisting of 4 convolutional stages and 3 fully connected layers.
+A classical CNN consisting of 4 convolutional stages and 3 fully connected layers.
 <img width="355" alt="image" src="https://github.com/Masa-Tantawy/Facial-Expression-Recognition/assets/81775839/f3f1e6dd-0275-44ec-b365-c5cf1d6e3415">
+- Research Paper: [Facial Emotion Recognition: State of the Art Performance on FER2013](https://arxiv.org/pdf/2105.03588v1)
 
 **Methodology:**
 - Hyperparameters Tuning
@@ -40,4 +42,4 @@ Final Output = average output of 3 distinct VGGNet models → ROS, SMOTE, SmoteT
 - os
 - cv2   
 All required dependencies are imported in the notebook.
-The model weights can be found [here](https://drive.google.com/drive/folders/1k_BRhO_E7dmuGrKZY_HquU3OME1UsUiX?usp=drive_link) 
+The model weights can be found [here](https://drive.google.com/drive/folders/1k_BRhO_E7dmuGrKZY_HquU3OME1UsUiX?usp=drive_link). 
