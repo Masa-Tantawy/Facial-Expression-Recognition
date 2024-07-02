@@ -26,3 +26,17 @@ Final Output = average output of 3 distinct VGGNet models → ROS, SMOTE, SmoteT
 - Top-1 Accuracy: 97.18%
 - Top-2 Accuracy : 99.58%
 - Top-3 Accuracy : 99.72%
+
+**Dependencies:**
+- Pandas
+- Numpy
+- Seaborn
+- Matplotlib
+- Keras TensorFlow
+- sklearn
+- imblearn
+- imgaug
+- imageio
+- os
+- cv2   
+All required dependies are imported in the notebook.
