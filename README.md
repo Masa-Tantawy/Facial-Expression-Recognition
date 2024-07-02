@@ -13,7 +13,7 @@ FER2013 Dataset
 VGGNet, short for Visual Geometry Group Network, trained on FER2013 dataset achieving an accuracy of 73.28%. It is a classical CNN consisting of 4 convolutional stages and 3 fully connected layers.   
 <img width="355" alt="image" src="https://github.com/Masa-Tantawy/Facial-Expression-Recognition/assets/81775839/f3f1e6dd-0275-44ec-b365-c5cf1d6e3415">
 
-**Methodology**
+**Methodology:**
 - Hyperparameters Tuning
 - Data Imbalance Handling
 - Data Augmentation
